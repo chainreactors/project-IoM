@@ -31,3 +31,9 @@
 [submodule "proto"]
 	path = proto
 	url = https://github.com/chainreactors/proto
+[submodule "implant/cross-rust"]
+	path = implant/cross-rust
+	url = https://github.com/chainreactors/cross-rust
+[submodule "third/rem"]
+	path = third/rem
+	url = https://github.com/chainreactors/rem
