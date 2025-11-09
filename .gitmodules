@@ -1,0 +1,33 @@
+[submodule "malice-network"]
+	path = malice-network
+	url = https://github.com/chainreactors/malice-network
+[submodule "mals/mals"]
+	path = mals/mals
+	url = https://github.com/chainreactors/mals
+[submodule "mals/mal-community"]
+	path = mals/mal-community
+	url = https://github.com/chainreactors/mal-community
+[submodule "implant/malefic"]
+	path = implant/malefic
+	url = https://github.com/chainreactors/malefic
+[submodule "sdk/IoM-typescript"]
+	path = sdk/IoM-typescript
+	url = https://github.com/chainreactors/IoM-typescript
+[submodule "sdk/IoM-go"]
+	path = sdk/IoM-go
+	url = https://github.com/chainreactors/IoM-go
+[submodule "sdk/IoM-python"]
+	path = sdk/IoM-python
+	url = https://github.com/chainreactors/IoM-python
+[submodule "mals/mal-intl"]
+	path = mals/mal-intl
+	url = https://github.com/chainreactors/mal-intl
+[submodule "implant/malefic-srid"]
+	path = implant/malefic-srid
+	url = https://github.com/chainreactors/malefic-srdi
+[submodule "implant/malefic-3rd-template"]
+	path = implant/malefic-3rd-template
+	url = https://github.com/chainreactors/malefic-3rd-template
+[submodule "proto"]
+	path = proto
+	url = https://github.com/chainreactors/proto
