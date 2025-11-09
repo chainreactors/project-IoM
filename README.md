@@ -157,16 +157,7 @@ git submodule update --remote --merge
 
 ## 安全声明
 
-⚠️ **本项目仅供授权的安全测试、防御性安全研究、CTF 竞赛和教育用途。**
-
-使用本工具需要明确的授权场景：
-- 渗透测试合约
-- CTF 竞赛
-- 安全研究
-- 防御性用例
-
-禁止用于未经授权的攻击、破坏性行为或恶意活动。
-
+**本项目仅供授权的安全测试、安全研究、CTF 竞赛和教育用途。**
 
 ## 相关链接
 
@@ -175,4 +166,4 @@ git submodule update --remote --merge
 
 ---
 
-**⚡ Built by ChainReactors**
+
