@@ -16,7 +16,10 @@ project-IoM/
 ├── implant/
 │   ├── malefic/            # 主植入体
 │   ├── malefic-srid/       # SRDI 实现
-│   └── malefic-3rd-template/ # 第三方模块模板
+│   ├── malefic-3rd-template/ # 第三方模块模板
+│   └── cross-rust/         # 交叉编译 Docker 镜像
+├── third/
+│   └── rem/                # 全场景代理工具
 ├── proto/                   # 协议定义
 ├── mals/
 │   ├── mals/               # 插件框架
@@ -36,6 +39,8 @@ project-IoM/
 - **语言**: Go 1.20+
 - **功能**: gRPC 服务端、交互式客户端、监听器管理、会话控制
 - **特性**: mTLS 认证、多监听器类型、Pipeline 流量路由、团队协作
+- **内置工具**:
+  - **gonut** (external/gonut) - 跨平台 PE-to-Shellcode 转换工具，纯 Go 实现的 Donut Generator，支持内存执行 EXE/DLL/.NET 程序集，提供加密、压缩、AMSI/WLDP/ETW 绕过等功能
 
 ### 2. [implant/malefic](https://github.com/chainreactors/malefic)
 **主植入体 (Agent/Beacon)**
@@ -56,46 +61,61 @@ project-IoM/
 - **语言**: Rust
 - **功能**: 扩展植入体能力的模块开发框架
 
-### 5. [proto](https://github.com/chainreactors/proto)
+### 5. [implant/cross-rust](https://github.com/chainreactors/cross-rust)
+**Rust 交叉编译环境**
+
+- **语言**: Docker
+- **功能**: malefic 植入体的交叉编译 Docker 镜像
+- **特性**: 支持多架构编译、基于 cross 项目重构、GitHub Actions 自动构建
+
+### 6. [third/rem](https://github.com/chainreactors/rem)
+**全场景代理工具**
+
+- **语言**: Go
+- **功能**: 应用层/传输层代理、端口转发、流量隧道
+- **特性**: 无 server/client 区分的对等架构、流量加密混淆、支持级联代理、心跳代理、端口复用
+- **文档**: https://chainreactors.github.io/wiki/rem/usage/
+
+### 7. [proto](https://github.com/chainreactors/proto)
 **Protocol Buffers 协议定义**
 
 - **语言**: Protobuf
 - **功能**: gRPC 服务定义、客户端/植入体消息协议
 - **包含**: 133+ gRPC 方法定义
 
-### 6. [mals/mals](https://github.com/chainreactors/mals)
+### 8. [mals/mals](https://github.com/chainreactors/mals)
 **插件系统核心框架**
 
 - **语言**: Go + Lua
 - **功能**: Lua 脚本引擎、插件加载器、命令扩展系统
 
-### 7. [mals/mal-community](https://github.com/chainreactors/mal-community)
+### 9. [mals/mal-community](https://github.com/chainreactors/mal-community)
 **社区贡献插件集合**
 
 - **语言**: Go + Lua
 - **功能**: 社区开发的扩展插件
 
-### 8. [mals/mal-intl](https://github.com/chainreactors/mal-intl)
-**国际化插件**
+### 10. [mals/mal-intl](https://github.com/chainreactors/mal-intl)
+**内置插件**
 
 - **语言**: Go + Lua
-- **功能**: 多语言支持和本地化
+- **功能**: community 版本内置插件
 
-### 9. [sdk/IoM-go](https://github.com/chainreactors/IoM-go)
+### 11. [sdk/IoM-go](https://github.com/chainreactors/IoM-go)
 **Go 语言 SDK**
 
 - **语言**: Go
 - **功能**: gRPC 客户端库、会话管理、事件监听
 - **用途**: Go 程序自动化操作 C2
 
-### 10. [sdk/IoM-python](https://github.com/chainreactors/IoM-python)
+### 12. [sdk/IoM-python](https://github.com/chainreactors/IoM-python)
 **Python 语言 SDK**
 
 - **语言**: Python 3.10+
 - **功能**: 异步 gRPC 客户端、类型提示、动态方法转发
 - **用途**: Python 脚本自动化操作 C2
 
-### 11. [sdk/IoM-typescript](https://github.com/chainreactors/IoM-typescript)
+### 13. [sdk/IoM-typescript](https://github.com/chainreactors/IoM-typescript)
 **TypeScript 语言 SDK**
 
 - **语言**: TypeScript
